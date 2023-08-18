@@ -48,12 +48,13 @@ getInstruction("mashedPotatoes", 0, (step0) => {
             "#mashedPotatoes"
           ).innerHTML += `<li>${step4}</li>`;
            document.querySelector("#mashedPotatoesImg").removeAttribute("hidden");
+           document.querySelector("#mashedPotatoes").innerHTML += `<li>Mashed potatoes are ready!</li>`
         });   
       });
     });
   });  
 });
-
+document.querySelector("#mashedPotatoesImg").innerHTML += `<li>Mashed potatoes are ready!</li>`
 // Iteration 2 - using promises
 obtainInstruction("steak", 0)
   .then((step0) => {
@@ -87,6 +88,7 @@ obtainInstruction("steak", 0)
   .then((step7) => {
     document.querySelector("#steak").innerHTML += `<li>${step7}</li>`;
     document.querySelector("#steakImg").removeAttribute("hidden");
+    document.querySelector("#steak").innerHTML += `<li>Steak is ready!</li>`
     return obtainInstruction("steak", 8);
   });
 
@@ -98,6 +100,7 @@ obtainInstruction("steak", 0)
        const instructionVariable = await obtainInstruction("broccoli", i); 
        document.querySelector("#broccoli").innerHTML += `<li>${instructionVariable}</li>`
      }
+     document.querySelector("#broccoli").innerHTML += `<li>Broccoli is ready!</li>`
     } catch (e){
       console.log("not working")
     }
