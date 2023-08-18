@@ -91,7 +91,20 @@ obtainInstruction("steak", 0)
   });
 
 // Iteration 3 using async/await
-// Carla
+
+  async function makeBroccoli(){
+    try{
+     for (let i = 0; i < broccoli.length; i++){
+       const instructionVariable = await obtainInstruction("broccoli", i); 
+       document.querySelector("#broccoli").innerHTML += `<li>${instructionVariable}</li>`
+     }
+    } catch (e){
+      console.log("not working")
+    }
+  
+  }
+
+  makeBroccoli(); 
 
 // Bonus 2 - Promise all
 const brusselsSproutsPromises = [];
