@@ -101,7 +101,7 @@ obtainInstruction("steak", 0)
     } catch (e){
       console.log("not working")
     }
-  
+    document.querySelector("#broccoliImg").removeAttribute("hidden");
   }
 
   makeBroccoli(); 
